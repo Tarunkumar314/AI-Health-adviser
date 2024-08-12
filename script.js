@@ -2,6 +2,8 @@
 const menuBtn = document.getElementById('menubar');
 const navbar = document.querySelector('.navbar');
 const aboutBtn = document.getElementById('aboutBtn');
+const botIcon = document.getElementById('botIcon');
+
 
 aboutBtn.addEventListener('click',()=>{
     var element = document.querySelector(".about"); 
@@ -165,6 +167,7 @@ chatInput.addEventListener("keydown", (e) => {
 // sendChatBtn.addEventListener("click", handleChat);
 closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
 chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
+botIcon.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
 
 document.addEventListener('DOMContentLoaded', () => {
     const readMoreButtons = document.querySelectorAll('.read-more-btn');
