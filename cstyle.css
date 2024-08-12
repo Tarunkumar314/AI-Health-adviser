@@ -1,0 +1,347 @@
+/* Variable Definitions */
+:root {
+    --main-color: #239f85;
+    --secondary-color: #ff5d22;
+    --tertiary-color: #DFE4E0;
+    --highlight-color: hsl(167, 81%, 79%);
+    --font-family: 'Arial', sans-serif;
+}
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.2s;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+/* Body Styles */
+body {
+    font-family: var(--font-family);
+    line-height: 2.6;
+    background: url('images/doctor-g024485840_1920.jpg') no-repeat center center/cover;
+    color: #333;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+/* Headings */
+h1 {
+    text-align: center;
+    color: #2e8b57;
+    margin-bottom: 20px;
+}
+
+/* Contact Information */
+.contact-info {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.contact-info a {
+    color: #2e8b57;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Form Styles */
+form {
+    margin: 0 1rem;
+    padding: 0 1%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form textarea {
+    height: 150px;
+}
+
+form button {
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    background-color: #ff4500;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: #e63900;
+}
+
+/* Header */
+.header {
+    padding: 1rem 3%;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 10%;
+}
+
+/* Logo Container */
+.logo-container {
+    flex-shrink: 0;
+    margin: 0.25%;
+    width: 39%;
+}
+
+#logo {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+/* Navbar Links */
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navbar a {
+    color: #fff;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.navbar a::after {
+    content: '';
+    background: var(--secondary-color);
+    width: 0;
+    height: 3px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 5px;
+    transition: width 0.3s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+/* 
+/* Icons */
+/* .icons div {
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: white;
+    display: none;
+}
+
+.icons a {
+    color: #fff;
+    background: var(--secondary-color);
+    font-size: 1.2rem;
+    transition: 0.5s;
+    padding: 1.5rem 2rem;
+    border-radius: 30px;
+}
+
+.icons a:hover {
+    background: transparent;
+    border: 1px solid var(--secondary-color);
+} */ 
+
+/* Background Image Section */
+.background-image {
+    background: url('images/doctor-g024485840_1920.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding-top: 6%;
+}
+
+/* Background Content */
+.background-content {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.background-content h1 {
+    color: #c6be28;
+    font-size: 4.375rem; /* 70px */
+    margin-bottom: 20px;
+}
+
+.background-content p {
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.background-content a {
+    background: var(--secondary-color);
+    padding: 0.75rem 1.5rem; /* Reduced padding for smaller button */
+    border-radius: 20px;
+    color: #fff;
+    font-size: 1.2rem; /* Reduced font size */
+    transition: 0.5s;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Centering the button */
+.background-content {
+    text-align: center; /* Centering the content */
+}
+
+/* Hover Effect */
+.background-content a:hover {
+    background: transparent;
+    border: 1px solid var(--secondary-color);
+    color: #000;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .background-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .background-content p {
+        font-size: 1.2rem;
+    }
+
+    .background-content a {
+        font-size: 1.2rem;
+        padding: 1rem 2rem;
+    }
+
+    #logo {
+        max-width: 300px;
+    }
+}
+
+
+/* Background Image Section */
+.background-image {
+    background: url('images/doctor-g024485840_1920.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.background-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #c6be28;
+    padding: 0 1rem;
+}
+
+.background-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.background-content p {
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.background-content a {
+    background: var(--secondary-color);
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 1.5rem;
+    transition: 0.5s;
+}
+
+.background-content a:hover {
+    background: transparent;
+    border: 1px solid var(--secondary-color);
+    color: #000;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #2e8b57;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .background-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .background-content p {
+        font-size: 1.2rem;
+    }
+
+    .background-content a {
+        font-size: 1.2rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    #logo {
+        width: 120px;
+    }
+}
